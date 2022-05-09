@@ -43,7 +43,7 @@ import LetterBox from './LetterBox/LetterBox.vue'
 import MessageBox from './MessageBox/MessageBox.vue'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   components: {
     'letter-box': LetterBox,
     'message-box': MessageBox
