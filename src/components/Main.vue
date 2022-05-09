@@ -73,7 +73,9 @@ export default {
           console.log('resolve', result)
           return new Promise((resolve, reject) => {
             const calculation = calculateHundredsClass(result)
-            this.maximumValues = this.getMaxValues(calculation)
+            this.maximumValues = this.getMaxValues(calculation).sort((a, b) => {
+              return Math.random() - 0.5
+            })
             resolve()
           })
         })
