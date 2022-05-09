@@ -26,7 +26,7 @@
 
       <div id="charsList">
         <letter-box
-          v-for="item in maximumValues"
+          v-for="item in randomize(maximumValues)"
           :key="item.letter + item.number"
           :charToDisplay="item.letter"
           :charCodeFor="item.number"
@@ -73,9 +73,7 @@ export default {
           console.log('resolve', result)
           return new Promise((resolve, reject) => {
             const calculation = calculateHundredsClass(result)
-            this.maximumValues = this.getMaxValues(calculation).sort((a, b) => {
-              return Math.random() - 0.5
-            })
+            this.maximumValues = this.getMaxValues(calculation)
             resolve()
           })
         })
@@ -129,6 +127,12 @@ export default {
         })
 
         resolve(inputToInts)
+      })
+    },
+    randomize: function (arrayOfObj) {
+      const newCopy = [...arrayOfObj]
+      return newCopy.sort((a, b) => {
+        return Math.random() - 0.5
       })
     }
   },
