@@ -25,24 +25,24 @@ export default {
 <style scoped>
 
 .customMessageBox {
-    margin: 5px 0;
-    padding: 5px;
-    border-width: 2px;
-    border-radius: 10px;
-    border-style: double;
+    margin: var(--smallSpacing) 0;
+    padding: var(--smallSpacing);
+    border-width: var(--messageBorderWidth);
+    border-radius: var(--normalSpacing);
+    border-style: var(--messageBorderStyle);
 }
 
 .customMessageBox.error {
-    border-color: red;
-    color: red;
+    border-color: var(--redColor);
+    color: var(--redColor);
 }
 
 .customMessageBox.normal {
-    border-color: black;
+    border-color: var(--blackColor);
 }
 
 .customMessageBox.success {
-    border-color: green;
-    color: green;
+    border-color: var(--greenColor);
+    color: var(--greenColor);
 }
 </style>

@@ -46,9 +46,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: var(--cardNormalFontSize);
     cursor: pointer;
-    /* flex: 0 0 calc(25% - 20px); */
 }
 
 .charBox:hover {
@@ -56,7 +55,7 @@ export default {
 }
 
 .charBox .charCode{
-    font-size: 10px;
+    font-size: var(--cardSmallFontSize);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -71,6 +70,7 @@ export default {
 @media only screen and (min-width: 640px) {
   .charBox {
     flex: 0 0 calc(33% - 10px);
+    font-size: var(--cardBigFontSize);
   }
 }
 

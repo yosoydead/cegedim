@@ -143,8 +143,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  width: 980px;
-  padding: 10px;
+  width: var(--containerWidth);
+  padding: var(--normalSpacing);
 }
 
 #inputField {
@@ -154,14 +154,13 @@ export default {
 
 #inputField input {
   width: 90%;
-  margin: 5px 0;
+  margin: var(--smallSpacing) 0;
 }
 
 #charsList {
   display: flex;
   flex-wrap: wrap;
-  /* flex: 0 0 calc(50% - 20px); */
-  gap: 10px;
-  margin-top: 10px;
+  gap: var(--normalSpacing);
+  margin-top: var(--normalSpacing);
 }
 </style>
