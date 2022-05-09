@@ -23,10 +23,7 @@ export default {
 </script>
 
 <style scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
+
 .customMessageBox {
     margin: 5px 0;
     padding: 5px;

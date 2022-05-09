@@ -23,11 +23,15 @@
     </div>
     <div v-if="showCharacters">
       <p>maxime {{ computedMaximumNumbers }}</p>
-      <letter-box
-        v-for="item in maximumValues"
-        :key="item.letter + item.number"
-        :charToDisplay="item.letter"
-      ></letter-box>
+
+      <div id="charsList">
+        <letter-box
+          v-for="item in maximumValues"
+          :key="item.letter + item.number"
+          :charToDisplay="item.letter"
+          :charCodeFor="item.number"
+        ></letter-box>
+      </div>
     </div>
   </div>
 </template>
@@ -140,6 +144,7 @@ export default {
 <style scoped>
 .hello {
   width: 980px;
+  padding: 10px;
 }
 
 #inputField {
@@ -150,5 +155,13 @@ export default {
 #inputField input {
   width: 90%;
   margin: 5px 0;
+}
+
+#charsList {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex: 0 0 calc(50% - 20px); */
+  gap: 10px;
+  margin-top: 10px;
 }
 </style>
