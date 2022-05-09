@@ -1,4 +1,4 @@
-export const calculateHundredsClass = (array, numClass) => {
+export const calculateHundredsClass = (array) => {
   const result = {}
 
   for (let i = 0; i < array.length; i++) {

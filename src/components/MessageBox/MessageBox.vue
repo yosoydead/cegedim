@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'MessageBox',
   props: {
     text: {
       type: String,

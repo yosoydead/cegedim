@@ -1,6 +1,6 @@
 export const generateArrayFromRange = (from, to) => {
   if (typeof from !== 'number' && typeof to !== 'number') {
-    console.log('one of the arguments is not a number')
+    console.log('argument(s) invalid')
     return []
   }
   const result = []
